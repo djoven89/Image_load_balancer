@@ -1,0 +1,13 @@
+upstream drupal.lan {
+  ip_hash;
+  server 172.17.0.20;
+  server 172.17.0.21;
+  server 172.17.0.22;
+}
+
+server {
+  listen 80 ;
+  location / {
+    proxy_pass http://drupal.lan;
+  }
+}
