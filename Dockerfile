@@ -6,3 +6,7 @@ RUN apt-get update && apt-get install nginx vim -y && apt-get autoremove -y && a
       && sed -i 's/# server/server/' /etc/nginx/nginx.conf
 
 COPY default /etc/nginx/sites-available/default
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
