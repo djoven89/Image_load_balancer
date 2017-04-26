@@ -1,6 +1,6 @@
 # Creación de una imagen NGINX como load_balancer
 
-La imagen tendrá una configuración predefinida ya para que nginx actué como balanceador de carga. Además, también ejecutará el script **'docker-entrypoint.sh'** que modificará el archivo de configuración de Nginx para añadir las direcciones IP de los servidores WEB que se le pasen como argumentos al **docker run ...** .
+La imagen tendrá una configuración predefinida para que nginx actué como balanceador de carga. Además, también ejecutará el script **'docker-entrypoint.sh'** que modificará el archivo de configuración de Nginx para añadir las direcciones IP de los servidores WEB que se le pasen como argumentos al **docker run ...** .
 
 **1. Lo primero que habrá que hacer será bajar los archivos 'Dockerfile', 'defaults' y docker-entrypoint.sh **
 
