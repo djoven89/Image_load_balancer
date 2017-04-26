@@ -2,15 +2,18 @@
 
 La imagen tendrá una configuración predefinida para que nginx actué como balanceador de carga. Además, también ejecutará el script **'docker-entrypoint.sh'** que modificará el archivo de configuración de Nginx para añadir las direcciones IP de los servidores WEB que se le pasen como argumentos al **docker run ...** .
 
-**1. Lo primero que habrá que hacer será bajar los archivos 'Dockerfile', 'defaults' y docker-entrypoint.sh**
+**Para crear la imagen habrá que realizar los siguientes pasos:**
 
-**2. Habrá que ejecutar el siguiente comando para crear la imagen:**
+      wget -O /tmp/loadbalancer.zip https://github.com/djoven89/Image_load_balancer/archive/master.zip
+      cd /tmp/
+      unzip loadbalancer.zip
+      cd Image_load_balancer-master
+      chmod 755 docker-entrypoint.sh
+      docker build -t ims_imagenes/loadbalancer:latest .
+ 
+**Después ya sólo quedará probar su funcionamiento:**
 
-      docker build -t mis_imagenes/loadbalancer:v1 .
-
-**3. Por último, sólo quedará probar su funcionamiento:**
-
-      docker run -d --name nginx -h nginx -e WEB1=172.20.0.51 -e WEB2=172.20.0.62 -e WEB2=172.20.0.63 mis_imagenes/loadbalancer:v1
+      docker run -d --name nginx -h nginx -e WEB1=172.20.0.51 -e WEB2=172.20.0.62 -e WEB3=172.20.0.63 mis_imagenes/loadbalancer:latest
 
 ### Comentarios
 
