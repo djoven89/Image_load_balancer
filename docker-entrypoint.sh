@@ -6,9 +6,9 @@ ARCHIVO="/etc/nginx/sites-available/default"
 
 # Compruebo existe el archivo de configuración de Nginx
 if [ ! -f $ARCHIVO ]
-	then
-		echo 'No se ha creado el fichero todavía...' > /error.txt
-		exit 1
+  then
+    echo 'No se ha creado el fichero todavía...' > /error.txt 
+    exit 1
 fi
 
 # Variable para quedarse con las variables de entorno en orden
@@ -22,6 +22,13 @@ env | grep -i web > /tmp/ip.txt
 
 # Me quedo con el número de servidores WEB
 NUMSRV=`env | grep -i web | wc -l`
+
+# Comprobando si se han añadido servidores
+if [ $NUMSRV = 0 ]
+  then
+    echo 'No se han añadido servidores' > /error.txt
+    exit 1
+fi
 
 for (( i=1; i<=$NUMSRV; i++ ))
    do
