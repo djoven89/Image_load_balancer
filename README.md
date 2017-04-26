@@ -9,7 +9,7 @@ La imagen tendrá una configuración predefinida para que nginx actué como bala
       unzip loadbalancer.zip
       cd Image_load_balancer-master
       chmod 755 docker-entrypoint.sh
-      docker build -t ims_imagenes/loadbalancer:latest .
+      docker build -t mis_imagenes/loadbalancer:latest .
  
 **Después ya sólo quedará probar su funcionamiento:**
 
