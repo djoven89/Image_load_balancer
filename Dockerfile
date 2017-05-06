@@ -2,6 +2,8 @@ FROM library/debian:jessie
 
 LABEL mainteiner 'djoven89' 
 
+ENV TZ=Europe/Madrid
+
 RUN \
        apt-get update && \
        apt-get install nginx -y --no-install-recommends && \
