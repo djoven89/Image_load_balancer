@@ -11,7 +11,7 @@ La imagen tendrá una configuración predefinida para que nginx actué como bala
  
 **Después ya sólo quedará probar su funcionamiento:**
 
-      docker run -d --name nginx -h nginx -e WEB1=172.20.0.51 -e WEB2=172.20.0.62 -e WEB3=172.20.0.63 mis_img/loadbalancer:latest
+      docker run -d --name nginx -h nginx -e WEB1=172.17.0.50 -e WEB2=172.17.0.51 -e WEB3=172.17.0.52 mis_img/loadbalancer:latest
 
 ### Comentarios
 
