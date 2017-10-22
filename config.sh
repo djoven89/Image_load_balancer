@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 NGINXCONF="/etc/nginx/sites-available/default"
 
