@@ -17,3 +17,6 @@ La imagen tendrá una configuración predefinida para que nginx actué como bala
 
 1. Por defecto, el rango de red es '172.17.0.0'.
 2. Hay configurados 5 servidores web aunque sólo el '172.17.0.20' está activo, el resto, están comentados.
+
+## Mejoras pendientes
+- Añadir una comprobación de las direcciones IP.
