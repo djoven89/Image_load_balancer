@@ -32,7 +32,7 @@ if [ $NUMSRV > 0 ]
 	   # en caso de coincidir, la modifico por el servidor que toque y descomento la línea
 	   if [ `grep -o 172.17.0.2$Y $NGINXCONF` ]
 	     then
-		  grep -o 172.17.0.2$Y $NGINXCONF | xargs -I {} sed -i "s/{}/$IPSRV/; s/^#server $IPSRV/  server $IPSRV/" $NGINXCONF
+		  grep -o 172.17.0.2$Y $NGINXCONF | xargs -I {} sed -i "s/{}/$IPSRV/; s/^# server $IPSRV/  server $IPSRV/" $NGINXCONF
 		  (( Y++ ))
 	   fi
 	  (( X++ ))
