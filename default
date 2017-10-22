@@ -1,11 +1,11 @@
 upstream drupal.lan {
   ip_hash;
   server 172.17.0.20 max_fails=3 fail_timeout=10s ;
-#  server 172.17.0.21 max_fails=3 fail_timeout=10s ;
-#  server 172.17.0.22 max_fails=3 fail_timeout=10s ;
-#  server 172.17.0.23 max_fails=3 fail_timeout=10s ;
-#  server 172.17.0.24 max_fails=3 fail_timeout=10s ;
-#  server 172.17.0.25 max_fails=3 fail_timeout=10s ;
+# server 172.17.0.21 max_fails=3 fail_timeout=10s ;
+# server 172.17.0.22 max_fails=3 fail_timeout=10s ;
+# server 172.17.0.23 max_fails=3 fail_timeout=10s ;
+# server 172.17.0.24 max_fails=3 fail_timeout=10s ;
+# server 172.17.0.25 max_fails=3 fail_timeout=10s ;
 }
 
 server {
